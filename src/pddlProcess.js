@@ -3,6 +3,8 @@ script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
 
+//const Updater = require('./guiUpdater.js')
+
 var imported = document.createElement('script');
  imported.src = 'src/guiUpdater.js';
  document.head.appendChild(imported);

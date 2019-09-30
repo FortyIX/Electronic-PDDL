@@ -2,7 +2,7 @@ const {app, BrowserWindow} = require('electron')
 const path = require('path')
 
 // entry page 
-let firWin 
+let firWin
 
 function initWindow() {
    firWin = new BrowserWindow({
@@ -11,12 +11,17 @@ function initWindow() {
        resizable: false
    })    
    firWin.loadFile('index.html')
+   
+  
+   console.log(runPath)
 }
 
 
  function initSettings(){
-   
+
  }
+
+ 
 
 
 app.on('ready', initWindow)

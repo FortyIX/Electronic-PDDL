@@ -2,8 +2,9 @@
  var imported = document.createElement('script');
  imported.src = 'src/pddlProcess.js';
  document.head.appendChild(imported);
-    
-//document.getElementById('submit-btn-style').addEventListener('click',() =>{process()})
+ 
+ //const Pddl = require('./pddlProcess.js')
+ //document.getElementById('submit-btn-style').addEventListener('click',() =>{process()})
 
 function onSubmit(){
    df = dEditor.getValue()
@@ -17,3 +18,5 @@ function onReset(){
    dEditor.setValue('');
    pEditor.setValue('');
 }
+
+

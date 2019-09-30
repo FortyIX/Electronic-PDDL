@@ -17,3 +17,5 @@ function updateUI(res){
 function showDetail(index){
 document.getElementById("result-screen").innerHTML=obj[index]['action']
 }
+
+
