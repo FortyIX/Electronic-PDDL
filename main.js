@@ -14,52 +14,12 @@ function initWindow() {
    firWin.loadFile('index.html');
    
    configAppMenu();
-   
-  
-  
   }
 
 
  function initSettings(){
 
  }
-
- function configAppMenu(){
-
-  if(process.platform == 'darwin'){
-    
-    firmenu = Menu.buildFromTemplate([
-      {
-         label: '',
-         submenu:[
-            {label: 'About'},
-            {label: 'Exit'},]
-      },
-      {
-        label: 'File',
-        submenu:[
-           {label: 'Save'},
-           {label: 'Load'},]
-     }
-    
-    ]);
-      }
-   else{
-    firmenu = Menu.buildFromTemplate([
-      {
-         label: 'File',
-         submenu:[
-            {label: 'Save'},
-            {label: 'Load'},
-           ]
-      }
-    ])
-   }
-   Menu.setApplicationMenu(firmenu);
- }
-
- 
-
 
 app.on('ready', initWindow)
 
@@ -74,5 +34,35 @@ app.on('activate', function () {
     if (firWin === null) initWindow()
   })
 
+  function configAppMenu(){
 
+    if(process.platform == 'darwin'){
+      
+      firmenu = Menu.buildFromTemplate([
+        {
+           label: '',
+           submenu:[
+              {label: 'About'},
+              {label: 'Exit'},]
+        },
+        {
+          label: 'File',
+          submenu:[
+             {label: 'Save'},
+             {label: 'Load'},]
+       }]);
+     }
+     else{
+      firmenu = Menu.buildFromTemplate([
+        {
+           label: 'File',
+           submenu:[
+              {label: 'Save'},
+              {label: 'Load'},
+             ]
+        }
+      ])
+     }
+     Menu.setApplicationMenu(firmenu);
+   }
 
