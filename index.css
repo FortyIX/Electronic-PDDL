@@ -25,8 +25,9 @@
 }
 
 #submit-btn-style{
-  width: 500px;
-  height: 40px;   
+  width: inherit;
+  height: 40px; 
+
 }
 
 
@@ -106,9 +107,15 @@
 }
 
 
+
+
+
 .grid-item { width: 200px; }
 .grid-item--width2 { width: 400px; }
 
 body{
-  background-color:lightcoral 
+  overflow-x:hidden;
+
+  background-color:lightcoral
 }
+ 

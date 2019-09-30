@@ -7,7 +7,7 @@ let firWin
 function initWindow() {
    firWin = new BrowserWindow({
        width: 1120,
-       height: 800,
+       height: 850,
    })    
    firWin.loadFile('index.html')
 }
