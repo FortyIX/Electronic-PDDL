@@ -1,8 +1,8 @@
-const {app, BrowserWindow} = require('electron')
+const {app, Menu, BrowserWindow} = require('electron')
 const path = require('path')
 
 // entry page 
-let firWin
+let firWin,firmenu
 
 function initWindow() {
    firWin = new BrowserWindow({
@@ -10,15 +10,52 @@ function initWindow() {
        height: 850,
        resizable: false
    })    
-   firWin.loadFile('index.html')
+
+   firWin.loadFile('index.html');
+   
+   configAppMenu();
    
   
-   console.log(runPath)
-}
+  
+  }
 
 
  function initSettings(){
 
+ }
+
+ function configAppMenu(){
+
+  if(process.platform == 'darwin'){
+    
+    firmenu = Menu.buildFromTemplate([
+      {
+         label: '',
+         submenu:[
+            {label: 'About'},
+            {label: 'Exit'},]
+      },
+      {
+        label: 'File',
+        submenu:[
+           {label: 'Save'},
+           {label: 'Load'},]
+     }
+    
+    ]);
+      }
+   else{
+    firmenu = Menu.buildFromTemplate([
+      {
+         label: 'File',
+         submenu:[
+            {label: 'Save'},
+            {label: 'Load'},
+           ]
+      }
+    ])
+   }
+   Menu.setApplicationMenu(firmenu);
  }
 
  
