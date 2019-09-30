@@ -1,4 +1,4 @@
-
+ 
  var imported = document.createElement('script');
  imported.src = 'src/pddlProcess.js';
  document.head.appendChild(imported);

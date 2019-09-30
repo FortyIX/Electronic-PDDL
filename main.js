@@ -2,7 +2,7 @@ const {app, Menu, BrowserWindow} = require('electron')
 const path = require('path')
 
 // entry page 
-let firWin,firmenu
+let firWin,firmenu,firSet
 
 function initWindow() {
    firWin = new BrowserWindow({
@@ -11,7 +11,9 @@ function initWindow() {
        resizable: false
    })    
 
-   firWin.loadFile('index.html');
+   // not working with darwin
+   //firWin.loadFile(path.join('file://', __dirname,'index.html'))
+   firWin.loadFile('index.html')
    
    configAppMenu();
   }
@@ -39,7 +41,8 @@ app.on('activate', function () {
            label: '',
            submenu:[
               {label: 'About'},
-              {label: 'Exit'},]
+              {label: 'Exit'},
+              {label: 'Setting', click(){onOpenSetting()}}]
         },
         {
           label: 'File',
@@ -59,6 +62,22 @@ app.on('activate', function () {
         }
       ])
      }
-     Menu.setApplicationMenu(firmenu);
+    Menu.setApplicationMenu(firmenu);
    }
+
+
+function onOpenSetting(){
+  
+  
+ 
+    firSet = new BrowserWindow({
+        height: 400,
+        width: 400
+    })
+    // not working with darwin
+    // firSet.loadFile(path.join('file://',__dirname,'page/setting.html'))
+    firSet.loadFile('page/setting.html')
+    
+}
+
 
