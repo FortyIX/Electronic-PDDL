@@ -4,7 +4,7 @@ script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
 
 var imported = document.createElement('script');
- imported.src = 'src/mainPageUpdate.js';
+ imported.src = 'src/guiUpdater.js';
  document.head.appendChild(imported);
 
 
