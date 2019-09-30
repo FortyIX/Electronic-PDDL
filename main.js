@@ -8,9 +8,15 @@ function initWindow() {
    firWin = new BrowserWindow({
        width: 1120,
        height: 850,
+       resizable: false
    })    
    firWin.loadFile('index.html')
 }
+
+
+ function initSettings(){
+   
+ }
 
 
 app.on('ready', initWindow)

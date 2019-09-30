@@ -7,7 +7,7 @@ function updateUI(res){
   
 
     for(var i=0; i<parseInt(res['result']['length']); i++){
-        var value = "<button onclick=\"showDetail("+i+")\">"+obj[i]['name']+"</button><br>"
+        var value = "<button onclick=\"showDetail("+i+")\">"+i+'.'+' '+ obj[i]['name']+"</button><br>"
         document.getElementById("detail-result-display-card").innerHTML+=value 
     }
     
