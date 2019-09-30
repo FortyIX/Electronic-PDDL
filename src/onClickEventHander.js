@@ -5,12 +5,10 @@
     
 //document.getElementById('submit-btn-style').addEventListener('click',() =>{process()})
 
-   function process(){
+function onSubmit(){
    df = editor.getValue()
    pf = editor2.getValue()
-
    //console.log(df)
 
    var process = new PddlProcess(df,pf)
-   
 }
