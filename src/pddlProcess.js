@@ -8,8 +8,6 @@ var imported = document.createElement('script');
  document.head.appendChild(imported);
 
 
-
-
 class PddlProcess{
     
 
@@ -26,16 +24,12 @@ class PddlProcess{
                   window.alert('Planning failed.');
                   }
                 console.log(res);
-                this.res = res
                 updateUI(res);
 
                });
          }
 
 
-     updateUI(){
-         
-
-     }    
+       
 }
 

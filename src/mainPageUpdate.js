@@ -1,16 +1,19 @@
 
+var obj
 
 function updateUI(res){
-    var resP = document.getElementById("detail-result-display-card").innerHTML
+    document.getElementById("detail-result-display-card").innerHTML= ""
+    obj = res['result']['plan']
+  
 
-    for(i=0; i<10; i++){
-        document.getElementById("detail-result-display-card").innerHTML+="<button onclick=\"hello()\">link</button><br>";  
+    for(var i=0; i<parseInt(res['result']['length']); i++){
+        var value = "<button onclick=\"showDetail("+i+")\">"+obj[i]['name']+"</button><br>"
+        document.getElementById("detail-result-display-card").innerHTML+=value 
     }
-    console.log(resP)
+    
     
 }
 
-function hello(){
- 
-    console.log("get lost JS ")
+function showDetail(index){
+document.getElementById("result-screen").innerHTML=obj[index]['action']
 }
