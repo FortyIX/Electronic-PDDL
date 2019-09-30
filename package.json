@@ -1,0 +1,21 @@
+{
+  "name": "elepddl",
+  "version": "1.0.0",
+  "description": "a pddl editor made by electron ",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": ".git"
+  },
+  "author": "Fu Zhang",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^6.0.10"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}

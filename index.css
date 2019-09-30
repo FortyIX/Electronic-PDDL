@@ -1,0 +1,114 @@
+#input-domain {
+  border: 10px;
+  padding: 10px;
+  /* opacity: 0.3; */
+}
+
+#input-domain-background {
+  border: 10px;
+  padding: 10px;
+  /* opacity: 0.3; */
+}
+
+
+#code-input{
+  /* TEST background-color: blueviolet; */
+   float: left;
+   width: 560px;
+   height: 760px;
+}
+
+
+#input-problem{
+  border: 10px;
+  padding: 10px;
+}
+
+#submit-btn-style{
+  width: 500px;
+  height: 40px;   
+}
+
+
+#submit-btn{
+    padding: 10px;
+    border: 10px;
+}
+
+#input-domain-title{
+  width: inherit;
+  height: 30px;
+  background-color: whitesmoke;
+  text-align: center;
+}
+#input-problem-title{
+  width: inherit;
+  height: 30px;
+  background-color: whitesmoke;
+  text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#result-display-card{
+    width: 500px;
+    /* height: auto; */
+    height: 500;
+    opacity: 0.6;
+    padding: 20px; 
+    border: 10px;
+    overflow: scroll;
+}
+
+
+#detail-result-display-card{
+  width: 500px;
+  /* height: auto; */
+  height: 200;
+  opacity: 0.6;
+  padding: 10px; 
+  border: 10px;
+  overflow: scroll;
+}
+#result-display-card-text{
+  width: 500px;
+  }
+
+
+#result-area{
+    /*TEST background-color: brown;*/
+    float: right;
+    
+    width: 560px;
+    height: 800px;
+    padding: 10px;
+    border: 10px;
+}
+
+#result-background{
+    /* TEST background-color: aqua; */
+    width: 560px;
+    height: 800px;
+    padding: 5px;
+    border: 5px;
+
+}
+
+
+.grid-item { width: 200px; }
+.grid-item--width2 { width: 400px; }
+
+body{
+  background-color:lightcoral 
+}

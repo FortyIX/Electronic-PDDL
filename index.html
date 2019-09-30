@@ -1,0 +1,101 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="lib/codemirror.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="index.css">
+
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="lib/codemirror.js"></script>
+    <script src="src/inputProcess.js"></script>
+    <script src="src/mainPageUpdate.js"></script>
+
+    <title>Electronic PPDL</title>
+
+</head>
+
+<body>
+
+    <div id="code-input">
+        <ul>
+
+            <li>
+                <div id="input-domain">
+                    <div id="input-domain-title"><p>Domain File</p></div>
+                    <input id="domainFile">
+                </div>
+            </li>
+            <li>
+                <div id="input-problem">
+                    <div id="input-problem-title"><p>Problem File</p></div>
+                    <input id="problemFile">
+                </div>
+            </li>
+            <li>
+                <div id="submit-btn">
+                    <button onclick="process()" type = "button" class = "waves-effect waves-light btn" id = "submit-btn-style">Plan</button>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+
+    <div id="result-area">
+       <div id="result-background">
+               <div class="row"  >
+                    <div class="col s12 m5">
+                      <div class="card blue-grey white" id="result-display-card">
+                        <div class="card-content black-text" id="result-display-card-text" >
+                          <span class="card-title" >Card Title</span>
+                             <p id = "result-screen">I am a very simple card. I am good at containing small bits of information.
+                                  I am convenient because I require little markup to use effectively.I am a very simple card. I am good at containing small bits of information.
+                                  I am convenient because I require little markup to use effectivelyI am a very simple card. I am good at containing small bits of information.
+                                  I am convenient because I require little markup to use effectivelyI am a very simple card. I am good at containing small bits of information.
+                                  I am convenient because I require little markup to use effectivelyI am a very simple card. I am good at containing small bits of information.
+                                  I am convenient because I require little markup to use effectivelyI am a very simple card. I am good at containing small bits of information.
+                                  I am convenient because I require little markup to use effectivelyI am a very simple card. I am good at containing small bits of information.
+                                  I am convenient because I require little markup to use effectivelyI am a very simple card. I am good at containing small bits of information.
+                                  I am convenient because I require little markup to use effectivelyI am a very simple card. I am good at containing small bits of information.
+                                  I am convenient because I require little markup to use effectivelyI am a very simple card. I am good at containing small bits of information.
+                                  I am convenient because I require little markup to use effectivelyI am a very simple card. I am good at containing small bits of information.
+                                  I am convenient because I require little markup to use effectively
+                                  I am convenient because I require little markup to use effectively
+                                  I am convenient because I require little markup to use effectively
+                                  I am convenient because I require little markup to use effectively
+                                  I am convenient because I require little markup to use effectively
+                                  I am convenient because I require little markup to use effectively
+                                  I am convenient because I require little markup to use effectively
+                                </p>
+                                
+                         </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="row"  >
+                        <div class="col s12 m5">
+                          <div class="card blue-grey white" id="detail-result-display-card">
+                            
+                          </div>
+                        </div>
+                      </div>
+       </div>
+         
+     </div>
+
+
+    <script>
+
+        var editor = CodeMirror.fromTextArea(domainFile, {
+            lineNumbers: true});
+        var editor2 = CodeMirror.fromTextArea(problemFile, {
+            lineNumbers: true});
+       
+    </script>
+
+
+</body>
+
+</html>
