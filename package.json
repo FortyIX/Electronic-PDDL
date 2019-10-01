@@ -13,7 +13,8 @@
   "author": "Fu Zhang",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^6.0.10"
+    "electron": "^6.0.10",
+    "electron-packager": "^14.0.6"
   },
   "dependencies": {
     "jquery": "^3.4.1"
