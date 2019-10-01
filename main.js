@@ -8,7 +8,10 @@ function initWindow() {
    firWin = new BrowserWindow({
        width: 1120,
        height: 850,
-       resizable: false
+       resizable: false,
+       webPreferences: {
+        nodeIntegration: true
+    }
    })    
 
    // not working with darwin
@@ -72,7 +75,10 @@ function onOpenSetting(){
  
     firSet = new BrowserWindow({
         height: 400,
-        width: 400
+        width: 400,
+        webPreferences: {
+          nodeIntegration: true
+      }
     })
     // not working with darwin
     // firSet.loadFile(path.join('file://',__dirname,'page/setting.html'))
