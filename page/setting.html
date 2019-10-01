@@ -30,15 +30,19 @@
 
             function onSubmit(){
                 console.log("hi")
-                const store = new Store({
-  
+                const store = new SettingRecorder({
                   name: 'bg-image',
                   defaults: {background: 'null'}
                 });
 
+                store.set('bg-image',document.getElementById('path_sle').textContent)
+                console.log(store.get('bg-image'))
+
             }
        
-          </script>    
+          </script>  
+          
+          
 
   
    </body>
