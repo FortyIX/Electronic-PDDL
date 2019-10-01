@@ -1,5 +1,7 @@
-const path = require('path')
-const fs = require('fs')
+
+ var imported = document.createElement('script');
+ imported.src = '../main.js';
+ document.head.appendChild(imported);
 
 class SettingRecorder{
     
@@ -31,5 +33,3 @@ function readData(fpath, defaults)
 
 }
 
-
-module.exports = SettingRecorder;

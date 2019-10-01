@@ -1,0 +1,42 @@
+<html>
+   <head>
+     <title>Settings</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link rel="stylesheet" href="setting.css">
+    
+     
+
+   </head>
+
+   <body>
+      
+    <div class="row">
+        <div class="col s12 m5">
+          
+          <div class="card-panel teal white" id="setting-holder">
+                <span class="card-title"><b>Background</b></span> 
+                <p>You can chnage the background image of the PDDL editor, please provide its path then press apply button </p>
+                
+                        <div class="input-field col s6">
+                                <input placeholder="Path to the image "id="path_sle" type="text">
+                                
+                        </div>
+                <button onclick="onSubmit()" type = "button" class = "waves-effect waves-light btn" id = "submit-btn-style">Apply</button>
+          
+            
+        </div>
+      </div>
+      <script>
+
+            function onSubmit(){
+                console.log("hi")
+            }
+       
+          </script>    
+
+  
+   </body>
+
+
+ 
+</html>
