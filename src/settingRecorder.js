@@ -14,9 +14,7 @@ class SettingRecorder{
    }
    
    get(key){return this.data[key]} 
-
    set(key,value){
-       
        this.date[key] = value;
        fs.writeFiileSync(this.path,JSON.stringify(this.data));
    }
