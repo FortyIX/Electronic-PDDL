@@ -13,7 +13,7 @@ function initWindow() {
         nodeIntegration: true
     }
    })    
-
+   
    // not working with darwin
    //firWin.loadFile(path.join('file://', __dirname,'index.html'))
    firWin.loadFile('index.html')
@@ -98,6 +98,7 @@ function onOpenSetting(){
           nodeIntegration: true
       }
     })
+    firSet.webContents.openDevTools()
     // not working with darwin
     // firSet.loadFile(path.join('file://',__dirname,'page/setting.html'))
     firSet.loadFile('page/setting.html')

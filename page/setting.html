@@ -29,14 +29,19 @@
       <script>
 
             function onSubmit(){
-                console.log("hi")
+                
+                let image =document.getElementById('path_sle').value
+              
                 const store = new SettingRecorder({
                   name: 'bg-image',
-                  defaults: {background: 'null'}
+                  defaults: {
+                    background: {image:'null'}
+                   }
                 });
 
-                store.set('bg-image',document.getElementById('path_sle').textContent)
-                console.log(store.get('bg-image'))
+
+                store.set('background',{image})
+                console.log(store.get('background'))
 
             }
        
