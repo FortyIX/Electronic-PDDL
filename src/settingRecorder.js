@@ -7,7 +7,7 @@ class SettingRecorder{
     
     constructor(configs){
         
-        const savePath = require('electron').remote.app.getPath('userData');
+        const savePath = require('electron').app.getPath('userData');
         this.path =path.join(savePath,configs.name+'.json')
         this.data = readData(this.path, configs.defaults)
         
@@ -15,9 +15,11 @@ class SettingRecorder{
    
    get(key){return this.data[key]} 
    set(key,value){
-       this.date[key] = value;
-       fs.writeFiileSync(this.path,JSON.stringify(this.data));
+       this.data[key] = value;
+       fs.writeFileSync(this.path,JSON.stringify(this.data));
    }
+
+
 }
 
 function readData(fpath, defaults)
@@ -33,4 +35,6 @@ function readData(fpath, defaults)
 
 
 }
+
+module.exports = SettingRecorder
 

@@ -1,8 +1,14 @@
+ 
+
 const {app, Menu, BrowserWindow} = require('electron')
 const path = require('path')
+const SettingRecorder =  require('./src/settingRecorder')
+
+debugger
 
 // entry page 
 let firWin,firmenu,firSet
+let bgImg
 
 function initWindow() {
    firWin = new BrowserWindow({
@@ -13,18 +19,16 @@ function initWindow() {
         nodeIntegration: true
     }
    })    
+   firWin.webContents.openDevTools()
    
    // not working with darwin
    //firWin.loadFile(path.join('file://', __dirname,'index.html'))
    firWin.loadFile('index.html')
    
    configAppMenu();
+   initSettings();
   }
 
-
- function initSettings(){
-
- }
 
 app.on('ready', initWindow)
 
@@ -35,7 +39,28 @@ app.on('activate', function () {
     if (firWin === null) initWindow()
   })
 
-  function configAppMenu(){
+
+
+function initSettings(){
+     
+  const store = new SettingRecorder({
+    name: 'bg-image',
+    defaults: {
+      background: {image:'file://path-to-your-file/image.png'}
+     }
+  });
+  
+
+   console.log(store.get('background'))
+
+     
+
+}
+ 
+
+
+
+function configAppMenu(){
 
     if(process.platform == 'darwin'){
       
